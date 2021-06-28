@@ -24,3 +24,5 @@ dist/
 nbdist/
 .nb-gradle/
 target/
+
+#git rm -r --cached *.class
