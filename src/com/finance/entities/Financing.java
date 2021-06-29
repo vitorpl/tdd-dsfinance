@@ -7,8 +7,6 @@ public class Financing {
 	
 	private double entry;
 	
-	public void finance() {}
-	
 	public Financing(double amount, double income, int months, double entry) {
 		super();
 		this.totalAmount = amount;
