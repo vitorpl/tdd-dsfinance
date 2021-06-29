@@ -167,12 +167,25 @@ public class FinancingTest {
 		int months = 80;
 		double entry = 20000;
 		
-		Financing fin1 = new Financing(totalAmount, income, months, entry);
-		
 		Assertions.assertDoesNotThrow(() -> {
 			Financing fin = new Financing(totalAmount, income, months, entry);
 			fin.setEntry(20_000);
 		});
+	}
+	
+	@Test
+	public void quotaShouldReturnCorrectQuotaValue() {
+		double totalAmount = 100_000;
+		double income = 2000;
+		int months = 80;
+		double entry = 20000;
+		double expectedQuota = 1000; 
+		
+		Financing fin = new Financing(totalAmount, income, months, entry);
+		
+		Assertions.assertEquals(expectedQuota, fin.quota());
+		
+		
 	}
 	
 	
